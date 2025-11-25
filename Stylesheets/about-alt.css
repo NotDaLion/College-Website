@@ -1,0 +1,583 @@
+/* About Alt styles — a more vivid alternative theme */
+
+:root {
+  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+  --primary: #0b5f8a; /* deep sea blue */
+  --accent: #ff8c42; /* coral */
+  --muted: #6a6f73;
+  --surface: #ffffff;
+  --card-radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #15292b;
+  -webkit-font-smoothing: antialiased;
+}
+
+.alt-container {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.alt-header {
+  background: rgba(11, 95, 138, 0.06);
+}
+
+.alt-header .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alt-logo {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.alt-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alt-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+.alt-nav a:hover,
+.alt-nav a.active {
+  color: var(--primary);
+  background: rgba(11, 95, 138, 0.06);
+}
+
+/* Hero */
+.alt-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.alt-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 95, 138, 0.15) 0%,
+    rgba(255, 255, 255, 0.0) 55%
+  ),
+  url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1e3f8c8b9e5a8a2b75cd7b3b8d2a2b25') center/cover no-repeat;
+  border-radius: 16px;
+}
+
+.alt-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0;
+}
+
+.alt-hero h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+}
+
+.alt-hero .sub {
+  color: #fffccc;
+  max-width: 600px;
+}
+
+.alt-btn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.alt-btn.alt-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+}
+
+/* About content */
+.alt-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.alt-about-text h2 {
+  margin-top: 0;
+}
+
+.alt-about-text p {
+  color: var(--muted);
+}
+
+.alt-about-text ul {
+  color: var(--muted);
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.alt-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.alt-stat {
+  background: var(--surface);
+  padding: 0.9rem;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.alt-stat .num {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.alt-about-media img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Team */
+.alt-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.member {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(20, 40, 40, 0.06);
+}
+
+.member img,
+.member .member-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.member h3 {
+  margin: 0.6rem 0 0.25rem;
+}
+
+.member .role {
+  color: var(--muted);
+}
+
+.member:focus {
+  outline: 3px solid rgba(11, 95, 138, 0.12);
+  outline-offset: 6px;
+}
+
+/* Timeline */
+.alt-timeline-wrap {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.alt-timeline-item {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.alt-timeline-controls {
+  margin-top: 0.6rem;
+}
+
+.alt-timeline-controls button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.alt-timeline-controls button.active {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+}
+
+/* CTA */
+.alt-cta {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.alt-cta .alt-btn {
+  margin-top: 0.8rem;
+}
+
+/* Modal */
+.member-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.member-modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.member-modal .member-content {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 420px;
+  width: 95%;
+}
+
+.member-modal img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .alt-about-grid {
+    grid-template-columns: 1fr;
+  }
+  .alt-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .alt-hero {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 560px) {
+  .alt-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .alt-nav ul {
+    display: none;
+  }
+}
+
+/* Accessibility tweaks */
+.alt-hero-inner {
+  padding-left: 0;
+}
+
+/* End of file */
+/* About Alt styles — a more vivid alternative theme */
+
+:root {
+  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+  --primary: #0b5f8a; /* deep sea blue */
+  --accent: #ff8c42; /* coral */
+  --muted: #6a6f73;
+  --surface: #ffffff;
+  --card-radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #15292b;
+  -webkit-font-smoothing: antialiased;
+}
+
+.alt-container {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.alt-header {
+  background: rgba(11,95,138,0.06);
+}
+.alt-header .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alt-logo {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.alt-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.alt-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+.alt-nav a:hover,
+.alt-nav a.active {
+  color: var(--primary);
+  background: rgba(11,95,138,0.06);
+}
+
+/* hero */
+.alt-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+.alt-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,95,138,0.15) 0%,
+    rgba(255,255,255,0.0) 55%
+  ),
+  url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1e3f8c8b9e5a8a2b75cd7b3b8d2a2b25') center/cover no-repeat;
+  border-radius: 16px;
+}
+.alt-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0;
+}
+.alt-hero h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+}
+.alt-hero .sub {
+  color: #fffccc;
+  max-width: 600px;
+}
+.alt-btn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.alt-btn.alt-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.22);
+}
+
+/* about content */
+.alt-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 1.4rem;
+  align-items: center;
+}
+.alt-about-text h2 {
+  margin-top: 0;
+}
+.alt-about-text p {
+  color: var(--muted);
+}
+.alt-about-text ul {
+  color: var(--muted);
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.alt-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.alt-stat {
+  background: var(--surface);
+  padding: 0.9rem;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+.alt-stat .num {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.alt-about-media img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Team */
+.alt-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.member {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(20,40,40,0.06);
+}
+.member img,
+.member .member-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.member h3 {
+  margin: 0.6rem 0 0.25rem;
+}
+.member .role {
+  color: var(--muted);
+}
+.member:focus {
+  outline: 3px solid rgba(11,95,138,0.12);
+  outline-offset: 6px;
+}
+
+/* timeline */
+.alt-timeline-wrap {
+  display: grid;
+  gap: 0.8rem;
+}
+.alt-timeline-item {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.alt-timeline-controls {
+  margin-top: 0.6rem;
+}
+.alt-timeline-controls button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.6rem;
+}
+.alt-timeline-controls button.active {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+}
+
+/* CTA */
+.alt-cta {
+  text-align: center;
+  padding: 2rem 0;
+}
+.alt-cta .alt-btn {
+  margin-top: 0.8rem;
+}
+
+/* modal */
+.member-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+.member-modal[aria-hidden="false"] {
+  display: flex;
+}
+.member-modal .member-content {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 420px;
+  width: 95%;
+}
+.member-modal img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* small screen */
+@media (max-width:920px){
+  .alt-about-grid {
+    grid-template-columns: 1fr;
+  }
+  .alt-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .alt-hero {
+    min-height: 280px;
+  }
+}
+@media (max-width:560px){
+  .alt-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .alt-nav ul {
+    display: none;
+  }
+}
+
+/* accessibility & small tweaks */
+.alt-hero-inner {
+  padding-left: 0;
+}
+
+/* End of file */
