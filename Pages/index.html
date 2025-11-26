@@ -3,50 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="../jquery-3.7.1.min.js"></script>
+    <title>La Cucina Del Mare</title>
+    <script src="../jquery-3.7.1.min.js.js"></script>
+    <link rel="stylesheet" href="../Stylesheets/styleHome.css">
     <script src="../Scripts/homePageScript.js"></script>
-    <link rel="stylesheet" href="../Stylesheets/style1.css">
 </head>
 <body>
     <header>
         <div class="top">
-            <img src="../Assets/vecteezy_a-black-and-white-image-of-a-fork-and-knife_49671037.png" width="100px" class="logo-img">
+            <div class="logoTitle">
+                <h1>La Cucina Del Mare</h1>
+            </div>
+        <nav>
+        <ul class="navBar">
+            <li class="cur-page"><a href="">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about-alt.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>  
+        </nav>
         </div>
     </header>
-    <nav>
-        <ul class="navBar">
-            <li>Language</li>
-            <li><a href="">Sign Up</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="about-alt.html">About Us</a></li>
-            <li><a href="">Order Now!</a></li>
-        </ul>  
-    </nav>
     <main>
         <hr class="top-main-seperator">
+        <!-- First Post -->
         <div class="post">
-            <h2>50% OFF OF OUR SPECIAL MEAL</h2>
-            <img src="../Assets/freepik__adjust__36279.png" class="content-img" width="100%">
+            <div class="img-div">
+            <img src="../Assets/shrimp.jpg" class="content-img" width="100%">
+            </div>
+                <div class="description">
+                <h2>20% off shrimp meals till the end of the week!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel tempore quidem assumenda iure vero ratione dolorem amet voluptate,
+                     nobis debitis neque saepe aut repellat vitae laudantium, non explicabo,
+                      exercitationem sapiente.
+                </p>
+                </div>
         </div>
+        <!-- Second Post -->
         <div class="post">
-            <h2>LIMITED TIME SANDWICHES</h2>
-            <img src="../Assets/LimitedTimeMeal.jpeg" class="content-img" width="100%">
+            <div class="description shift-right">
+                <h2>Limited time octopus meal!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vel tempore quidem assumenda iure vero ratione dolorem amet voluptate,
+                         nobis debitis neque saepe aut repellat vitae laudantium, non explicabo,
+                          exercitationem sapiente.
+                </p>
+            </div>  
+            <div class="img-div">
+            <img src="../Assets/cooked_octo.jpg" class="content-img" width="100%">
+            </div>
         </div>
-        <div class="post">
-            <h2>New branch just opened in Abbey Road!</h2>
-            <img src="../Assets/NewBranchOpened.jpeg" class="content-img" width="100%">
+        <!-- Third Post -->
+            <div class="post">
+            <div class="img-div">        
+            <img src="../Assets/restaurant_img1.jpg" class="content-img" width="100%">
+            </div>
+                <div class="description">
+                    <h2>New branch just opened in Abbey Road!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vel tempore quidem assumenda iure vero ratione dolorem amet voluptate,
+                         nobis debitis neque saepe aut repellat vitae laudantium, non explicabo,
+                          exercitationem sapiente.
+                    </p>
+                </div>
         </div>
+        <!---->
     </main>
     <hr>
     <footer>
-        <img src="../Assets/vecteezy_a-black-and-white-image-of-a-fork-and-knife_49671037.png" class="small-logo-img"
-        width="50px">
-        <p>Copyright © myRestaurant 2022-2025. All Rights Reserved</p>
-        <button>facebook</button>
-        <button>instagram</button>
-        <button>youtube</button>
+        <p class="Copyright">Copyright © La Cucina Del Mare 2022-2025. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><img src="../Assets/facebook.png" class="social-img"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../Assets/Instagram_logo_2022.svg" class="social-img"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="../Assets/Youtube_logo.png" class="social-img" id="facebook"></a>            
+        </div>
     </footer>
-
 </body>
 </html>
