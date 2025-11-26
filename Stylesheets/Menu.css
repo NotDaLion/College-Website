@@ -1,0 +1,185 @@
+/* Menu.css — kept your original "About Alt" style variables and look, extended for the new menu markup */
+
+:root {
+  --primary: #0b5f8a; /* deep sea blue */
+  --accent: #ff8c42; /* coral */
+  --muted: #6a6f73;
+  --surface: #ffffff;
+  --card-radius: 14px;
+  --glass: rgba(255,255,255,0.92);
+}
+
+/* Reset + base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #15292b;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, h3, h4 {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* container */
+.alt-container {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header (matches original exactly) */
+.alt-header {
+  background: rgba(11, 95, 138, 0.06);
+}
+.alt-header .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alt-logo {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.alt-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.alt-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+.alt-nav a:hover,
+.alt-nav a.active {
+  color: var(--primary);
+  background: rgba(11, 95, 138, 0.06);
+}
+
+/* Section title (keeps your same look) */
+.menu.section { padding: 2.5rem 0 4rem; }
+.section-title { text-align: center; margin-bottom: 1.75rem; }
+.section-title h2 { margin: 0; color: var(--primary); font-size: 1.6rem; letter-spacing: 0.6px; }
+.section-title p { margin: 0.25rem 0 0; color: var(--muted); }
+.description-title { font-weight: 700; color: var(--accent); }
+
+/* Tabs — follow original style but more usable for buttons */
+.nav-tabs { border-bottom: none; margin-bottom: 1.5rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+.nav-tabs .nav-link { border: none; padding: 0.7rem 1.2rem; border-radius: 12px; margin: 0; display: inline-flex; align-items: center; justify-content: center; }
+.nav-tabs .nav-link.active { background: linear-gradient(90deg, rgba(11,95,138,0.08), rgba(255,140,66,0.04)); color: var(--primary); box-shadow: 0 6px 18px rgba(11,95,138,0.05); }
+
+/* Tab header (same feel) */
+.tab-header p { margin: 0; color: var(--muted); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+.tab-header h3 { margin: 0.35rem 0 1rem; color: var(--primary); }
+
+/* Menu item card — new rules but keep rounded, glassy look from your variables */
+.menu-card {
+  background: var(--glass);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 6px 18px rgba(11,95,138,0.03);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.menu-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(11,95,138,0.06); }
+
+/* image used in menu */
+.menu-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Inner body of card */
+.menu-card-body {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.menu-card-body h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ingredients {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.price {
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* small badge (kept same style) */
+.badge-fresh {
+  background: rgba(11, 95, 138, 0.08);
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+/* legacy .menu-item compatibility (if you keep some old markup) */
+.menu-item {
+  background: var(--glass);
+  border-radius: var(--card-radius);
+  padding: 0.9rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(11,95,138,0.03);
+}
+.menu-item .menu-img { width: 110px; height: 88px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+.menu-item h4 { margin: 0 0 0.25rem 0; font-size: 1rem; color: var(--primary); }
+.menu-item .ingredients { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.menu-item .price { margin-left: auto; font-weight: 700; color: var(--accent); font-size: 1rem; }
+
+/* footer (same as original) */
+.alt-footer {
+  border-top: 1px solid rgba(11,95,138,0.04);
+  color: var(--primary);
+  background: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+  padding: 1rem 0;
+}
+.alt-footer .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary);
+}
+.alt-footer a { color: var(--muted); text-decoration: none; margin-left: 0.75rem; }
+
+/* responsive tweaks */
+@media (min-width: 768px) {
+  .menu-img { height: 160px; }
+}
+@media (min-width: 992px) {
+  .menu-img { height: 180px; }
+  .alt-container { padding: 2rem 0; }
+}
+
+/* small accessibility helpers */
+.menu-card a.glightbox { display: block; }
+.menu-card img[alt=""] { filter: saturate(0.95); }
