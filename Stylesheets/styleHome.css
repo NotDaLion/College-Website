@@ -1,12 +1,46 @@
 :root{
     --primary: #0b5f8a;
+    --accent: #ff8c42;
     --post-color: #ffffff;
 }
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    height: 80px;
+    padding: 0 4%;
+}
+.logoTitle{
+    display: flex;
+    flex: 1 1 auto;
+}
+.logo-img{
+    height: 100%;
+}
+.navBar{
+    display: none;
+}
+h1{
+    flex: 1 1 0;
+    font-size: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
 :root {
-  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+    /* colors Zyad chose
   --primary: #0b5f8a; /* deep sea blue */
-  --accent: #ff8c42; /* coral */
-  --muted: #6a6f73;
+  /*--accent: #ff8c42; /* coral */
+  /*--muted: #6a6f73;
   --surface: #ffffff;
   --card-radius: 14px;
+  */
 }
