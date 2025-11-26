@@ -1,146 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - La Cucina Del Mare (Alt)</title>
-  <link rel="stylesheet" href="styles/about-alt.css">
-</head>
-<body>
-  <header class="alt-header">
-    <div class="alt-container">
-      <a class="alt-logo" href="/">La Cucina Del Mare</a>
-      <nav class="alt-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/menu.html">Menu</a></li>
-          <li><a href="/about/about-alt.html" class="active">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="alt-main">
-    <section class="alt-hero">
-      <div class="alt-overlay"></div>
-      <div class="alt-hero-inner alt-container">
-        <h1>Welcome to our kitchen</h1>
-        <p class="sub">A new take on coastal cuisine — seasonal, imaginative, and lovingly prepared.</p>
-        <div class="alt-cta">
-          <button id="tour" class="alt-btn">Take a virtual tour</button>
-          <button id="reserve" class="alt-btn alt-outline">Reserve a table</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt-about alt-container" id="about">
-      <div class="alt-about-grid">
-        <div class="alt-about-text">
-          <h2>Our Philosophy</h2>
-          <p>From the sea to your fork, we prioritize freshness and sustainable sourcing. Our menu changes with the seasons and with what our local suppliers bring in each day.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - La Cucina Del Mare (Alt)</title>
+    <link rel="stylesheet" href="../Stylesheets/about-alt.css" />
+  </head>
+  <body>
+    <header class="alt-header">
+      <div class="alt-container">
+        <a class="alt-logo" href="/">La Cucina Del Mare</a>
+        <nav class="alt-nav">
           <ul>
-            <li>Locally sourced seafood</li>
-            <li>Sustainable daily practices</li>
-            <li>Community-first events</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="../Pages/Menu.html">Menu</a></li>
+            <li><a href="../Pages/about-alt.html" class="active">About</a></li>
+            <li><a href="../Pages/contact.html">Contact</a></li>
           </ul>
-          <div class="alt-stats">
-            <div class="alt-stat">
-              <strong class="num" data-target="28">0</strong>
-              <span>Years</span>
-            </div>
-            <div class="alt-stat">
-              <strong class="num" data-target="120">0</strong>
-              <span>Dishes</span>
-            </div>
-            <div class="alt-stat">
-              <strong class="num" data-target="5400">0</strong>
-              <span>Guests served</span>
-            </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="alt-main">
+      <section class="alt-hero">
+        <div class="alt-overlay"></div>
+        <div class="alt-hero-inner alt-container">
+          <h1>Welcome to our kitchen</h1>
+          <p class="sub">
+            A new take on coastal cuisine — seasonal, imaginative, and lovingly
+            prepared.
+          </p>
+          <div class="alt-cta">
+            <button id="tour" class="alt-btn">Take a virtual tour</button>
+            <button id="reserve" class="alt-btn alt-outline">
+              Reserve a table
+            </button>
           </div>
         </div>
-        <div class="alt-about-media">
-          <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d52ff4452a1f0c0a83b12d50dbb7f66" alt="Chef prepping"/>
+      </section>
+
+      <section class="alt-about alt-container" id="about">
+        <div class="alt-about-grid">
+          <div class="alt-about-text">
+            <h2>Our Philosophy</h2>
+            <p>
+              From the sea to your fork, we prioritize freshness and sustainable
+              sourcing. Our menu changes with the seasons and with what our
+              local suppliers bring in each day.
+            </p>
+            <ul>
+              <li>Locally sourced seafood</li>
+              <li>Sustainable daily practices</li>
+              <li>Community-first events</li>
+            </ul>
+            <div class="alt-stats">
+              <div class="alt-stat">
+                <strong class="num" data-target="28">0</strong>
+                <span>Years</span>
+              </div>
+              <div class="alt-stat">
+                <strong class="num" data-target="120">0</strong>
+                <span>Dishes</span>
+              </div>
+              <div class="alt-stat">
+                <strong class="num" data-target="5400">0</strong>
+                <span>Guests served</span>
+              </div>
+            </div>
+          </div>
+          <div class="alt-about-media">
+            <img
+              src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d52ff4452a1f0c0a83b12d50dbb7f66"
+              alt="Chef prepping"
+            />
+          </div>
         </div>
+      </section>
+
+      <section class="alt-team alt-container" id="team">
+        <h2>Meet our crew</h2>
+        <div class="alt-team-grid">
+          <article
+            class="member"
+            tabindex="0"
+            data-img="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b43a74a3e452d277ab3f3a8a0d6e82a"
+            data-name="Anna Rossi"
+            data-bio="Head Chef with a love of Mediterranean seafood."
+          >
+            <div
+              class="member-img"
+              aria-hidden="true"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b43a74a3e452d277ab3f3a8a0d6e82a');
+              "
+            ></div>
+            <h3>Anna Rossi</h3>
+            <p class="role">Head Chef</p>
+          </article>
+
+          <article
+            class="member"
+            tabindex="0"
+            data-img="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ea5f6b7b4e0481b1d06e8c9c4bb0f64f"
+            data-name="Marco Bianchi"
+            data-bio="Friendly general manager and community host"
+          >
+            <div
+              class="member-img"
+              aria-hidden="true"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ea5f6b7b4e0481b1d06e8c9c4bb0f64f');
+              "
+            ></div>
+            <h3>Marco Bianchi</h3>
+            <p class="role">General Manager</p>
+          </article>
+
+          <article
+            class="member"
+            tabindex="0"
+            data-img="https://images.unsplash.com/photo-1549194388-1b073bca4f2a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=26a1cc8006da06a6e23a4f2b79e8f7d3"
+            data-name="Lucia Moretti"
+            data-bio="Sommelier and wine curator."
+          >
+            <div
+              class="member-img"
+              aria-hidden="true"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1549194388-1b073bca4f2a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=26a1cc8006da06a6e23a4f2b79e8f7d3');
+              "
+            ></div>
+            <h3>Lucia Moretti</h3>
+            <p class="role">Sommelier</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="alt-timeline alt-container" id="timeline">
+        <h2>Our story</h2>
+        <div class="alt-timeline-wrap">
+          <div class="alt-timeline-item" data-year="1998">
+            <strong>1998</strong>
+            <p>We started as a market stall serving fresh-caught seafood.</p>
+          </div>
+          <div class="alt-timeline-item" data-year="2007">
+            <strong>2007</strong>
+            <p>
+              First storefront opened — small and warm for our local community.
+            </p>
+          </div>
+          <div class="alt-timeline-item" data-year="2018">
+            <strong>2018</strong>
+            <p>
+              Major sustainability-focused renovation — updated kitchen and new
+              menu.
+            </p>
+          </div>
+          <div class="alt-timeline-controls">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="1998">1998</button>
+            <button data-filter="2007">2007</button>
+            <button data-filter="2018">2018</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt-cta alt-container">
+        <h2>Ready for a taste?</h2>
+        <p>Reserve a table or drop by for our special evening tastings.</p>
+        <div class="alt-cta-actions">
+          <button id="book" class="alt-btn">Book now</button>
+          <button id="join-us" class="alt-btn alt-outline">
+            Join our mailing list
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="alt-footer">
+      <div class="alt-container">
+        <p>&copy; <span id="alt-year">2025</span> La Cucina Del Mare</p>
+        <nav>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </nav>
       </div>
-    </section>
+    </footer>
 
-    <section class="alt-team alt-container" id="team">
-      <h2>Meet our crew</h2>
-      <div class="alt-team-grid">
-        <article class="member" tabindex="0" data-img="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b43a74a3e452d277ab3f3a8a0d6e82a" data-name="Anna Rossi" data-bio="Head Chef with a love of Mediterranean seafood." >
-          <div class="member-img" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b43a74a3e452d277ab3f3a8a0d6e82a')"></div>
-          <h3>Anna Rossi</h3>
-          <p class="role">Head Chef</p>
-        </article>
-
-        <article class="member" tabindex="0" data-img="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ea5f6b7b4e0481b1d06e8c9c4bb0f64f" data-name="Marco Bianchi" data-bio="Friendly general manager and community host">
-          <div class="member-img" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ea5f6b7b4e0481b1d06e8c9c4bb0f64f')"></div>
-          <h3>Marco Bianchi</h3>
-          <p class="role">General Manager</p>
-        </article>
-
-        <article class="member" tabindex="0" data-img="https://images.unsplash.com/photo-1549194388-1b073bca4f2a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=26a1cc8006da06a6e23a4f2b79e8f7d3" data-name="Lucia Moretti" data-bio="Sommelier and wine curator.">
-          <div class="member-img" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1549194388-1b073bca4f2a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=26a1cc8006da06a6e23a4f2b79e8f7d3')"></div>
-          <h3>Lucia Moretti</h3>
-          <p class="role">Sommelier</p>
-        </article>
+    <div id="member-modal" aria-hidden="true" class="member-modal">
+      <button class="close-modal" aria-label="Close">✕</button>
+      <div class="member-content">
+        <img src="" alt="" />
+        <h3></h3>
+        <p></p>
       </div>
-    </section>
-
-    <section class="alt-timeline alt-container" id="timeline">
-      <h2>Our story</h2>
-      <div class="alt-timeline-wrap">
-        <div class="alt-timeline-item" data-year="1998">
-          <strong>1998</strong>
-          <p>We started as a market stall serving fresh-caught seafood.</p>
-        </div>
-        <div class="alt-timeline-item" data-year="2007">
-          <strong>2007</strong>
-          <p>First storefront opened — small and warm for our local community.</p>
-        </div>
-        <div class="alt-timeline-item" data-year="2018">
-          <strong>2018</strong>
-          <p>Major sustainability-focused renovation — updated kitchen and new menu.</p>
-        </div>
-        <div class="alt-timeline-controls">
-          <button data-filter="all" class="active">All</button>
-          <button data-filter="1998">1998</button>
-          <button data-filter="2007">2007</button>
-          <button data-filter="2018">2018</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt-cta alt-container">
-      <h2>Ready for a taste?</h2>
-      <p>Reserve a table or drop by for our special evening tastings.</p>
-      <div class="alt-cta-actions">
-        <button id="book" class="alt-btn">Book now</button>
-        <button id="join-us" class="alt-btn alt-outline">Join our mailing list</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="alt-footer">
-    <div class="alt-container">
-      <p>&copy; <span id="alt-year">2025</span> La Cucina Del Mare</p>
-      <nav>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-      </nav>
     </div>
-  </footer>
 
-  <div id="member-modal" aria-hidden="true" class="member-modal">
-    <button class="close-modal" aria-label="Close">✕</button>
-    <div class="member-content">
-      <img src="" alt=""/>
-      <h3></h3>
-      <p></p>
-    </div>
-  </div>
-
-  <script src="scripts/about-alt.js"></script>
-</body>
+    <script src="scripts/about-alt.js"></script>
+  </body>
 </html>

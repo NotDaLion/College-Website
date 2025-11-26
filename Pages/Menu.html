@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu — La Cucina Del Mare</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Stylesheets/Menu.css" />
+  </head>
+  <body>
+    <header class="alt-header" role="banner">
+      <div class="alt-container">
+        <a class="alt-logo" href="/" aria-label="La Cucina Del Mare homepage"
+          >La Cucina Del Mare</a
+        >
+        <nav class="alt-nav" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="../Pages/Menu.html" class="active">Menu</a></li>
+            <li><a href="../Pages/about-alt.html">About</a></li>
+            <li><a href="../Pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="menu" class="menu section" aria-labelledby="menu-heading">
+        <div class="container section-title">
+          <h2 id="menu-heading">Our Menu</h2>
+          <p>
+            <span>Check Our</span>
+            <span class="description-title">Yummy Menu</span>
+          </p>
+        </div>
+
+        <div class="alt-container">
+          <!-- Tabs -->
+          <ul class="nav nav-tabs justify-content-center" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="tab-starters"
+                data-bs-toggle="tab"
+                data-bs-target="#menu-starters"
+                type="button"
+                role="tab"
+                aria-controls="menu-starters"
+                aria-selected="true"
+              >
+                <h4>Starters</h4>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab-beef"
+                data-bs-toggle="tab"
+                data-bs-target="#menu-beef"
+                type="button"
+                role="tab"
+                aria-controls="menu-beef"
+                aria-selected="false"
+              >
+                <h4>Seafood</h4>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab-chicken"
+                data-bs-toggle="tab"
+                data-bs-target="#menu-chicken"
+                type="button"
+                role="tab"
+                aria-controls="menu-chicken"
+                aria-selected="false"
+              >
+                <h4>Pastas</h4>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab-dessert"
+                data-bs-toggle="tab"
+                data-bs-target="#menu-dessert"
+                type="button"
+                role="tab"
+                aria-controls="menu-dessert"
+                aria-selected="false"
+              >
+                <h4>Desserts</h4>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!-- Starters -->
+            <div
+              class="tab-pane fade show active"
+              id="menu-starters"
+              role="tabpanel"
+              aria-labelledby="tab-starters"
+            >
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Starters</h3>
+              </div>
+
+              <div class="row g-4">
+                <!-- Calamari -->
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a
+                      href="../Assets/Calamari-5.jpg"
+                      class="glightbox"
+                      aria-label="View Calamari Fritti"
+                    >
+                      <img
+                        src="../Assets/Calamari-5.jpg"
+                        alt="Calamari Fritti"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>
+                        Calamari Fritti <span class="badge-fresh">Chef's</span>
+                      </h4>
+                      <p class="ingredients">
+                        Lightly fried squid served with lemon & garlic aioli.
+                      </p>
+                      <div class="price">$9.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Gamberetti al Limone -->
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a
+                      href="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
+                      class="glightbox"
+                      aria-label="View Gamberetti al Limone"
+                    >
+                      <img
+                        src="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
+                        alt="Gamberetti al Limone"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Gamberetti al Limone</h4>
+                      <p class="ingredients">
+                        Sautéed prawns with garlic, fresh lemon & parsley.
+                      </p>
+                      <div class="price">$11.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Cozze alla Marinara -->
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a
+                      href="../Assets/cozze-alla-marinara-pomodoro-1-1024x683.jpg"
+                      class="glightbox"
+                      aria-label="View Cozze alla Marinara"
+                    >
+                      <img
+                        src="../Assets/cozze-alla-marinara-pomodoro-1-1024x683.jpg"
+                        alt="Cozze alla Marinara"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Cozze alla Marinara</h4>
+                      <p class="ingredients">
+                        Mussels simmered in tomato, garlic & white wine.
+                      </p>
+                      <div class="price">$12.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a
+                      href="../Assets/Bruschetta-al-pomodoro-2.jpg"
+                      class="glightbox"
+                    >
+                      <img
+                        src="../Assets/Bruschetta-al-pomodoro-2.jpg"
+                        alt="Bruschetta"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Bruschetta al Pomodoro</h4>
+                      <p class="ingredients">
+                        Grilled bread with tomato, basil & olive oil.
+                      </p>
+                      <div class="price">$7.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a href="../Assets/insalata.jpg" class="glightbox">
+                      <img
+                        src="../Assets/insalata.jpg"
+                        alt="Insalata di Mare"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Insalata di Mare</h4>
+                      <p class="ingredients">
+                        Mixed seafood salad with citrus dressing.
+                      </p>
+                      <div class="price">$13.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card h-100">
+                    <a href="../Assets/focaccia.jpg" class="glightbox">
+                      <img
+                        src="../Assets/focaccia.jpg"
+                        alt="Focaccia"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Focaccia al Rosmarino</h4>
+                      <p class="ingredients">
+                        House rosemary focaccia, sea salt.
+                      </p>
+                      <div class="price">$5.95</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- Seafood -->
+            <div
+              class="tab-pane fade"
+              id="menu-beef"
+              role="tabpanel"
+              aria-labelledby="tab-Seafood"
+            >
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Seafood</h3>
+              </div>
+
+              <div class="row g-4">
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/gambary mashwy.jpg"
+                      class="glightbox"
+                      aria-label="View Gamberi alla griglia"
+                    >
+                      <img
+                        src="../Assets/gambary mashwy.jpg"
+                        alt="Gamberi alla griglia"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Gamberi alla griglia</h4>
+                      <p class="ingredients">
+                        Grilled shrimp with herb butter & lemon.
+                      </p>
+                      <div class="price">$15.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/BOLTY.jpg"
+                      class="glightbox"
+                      aria-label="View Branzino al Forno"
+                    >
+                      <img
+                        src="../Assets/BOLTY.jpg"
+                        alt="Branzino al Forno"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Branzino al Forno</h4>
+                      <p class="ingredients">
+                        Whole sea bass roasted with rosemary & lemon.
+                      </p>
+                      <div class="price">$22.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/Zuppa.jpg"
+                      class="glightbox"
+                      aria-label="View Zuppa di Pesce"
+                    >
+                      <img
+                        src="../Assets/Zuppa.jpg"
+                        alt="Zuppa di Pesce"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Zuppa di Pesce</h4>
+                      <p class="ingredients">
+                        Hearty fish soup with mussels, clams & prawns.
+                      </p>
+                      <div class="price">$18.50</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/salmon.jpg"
+                      class="glightbox"
+                      aria-label="View Polpo alla Griglia"
+                    >
+                      <img
+                        src="../Assets/salmon.jpg"
+                        alt="Polpo alla Griglia"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Sinfonia di Salmone</h4>
+                      <p class="ingredients">
+                        Fresh and smoked salmon with lemon, herbs, and house
+                        sauces.
+                      </p>
+                      <div class="price">$19.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/mix.avif"
+                      class="glightbox"
+                      aria-label="View Grigliata di Pesce"
+                    >
+                      <img
+                        src="../Assets/mix.avif"
+                        alt="Grigliata di Pesce"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Grigliata di Pesce</h4>
+                      <p class="ingredients">
+                        Mixed seafood grill — seasonal selection.
+                      </p>
+                      <div class="price">$28.95</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Pastas -->
+            <div
+              class="tab-pane fade"
+              id="menu-chicken"
+              role="tabpanel"
+              aria-labelledby="tab-chicken"
+            >
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Pastas</h3>
+              </div>
+
+              <div class="row g-4">
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/Con-gamberetti.jpg"
+                      class="glightbox"
+                      aria-label="View Con gamberetti"
+                    >
+                      <img
+                        src="../Assets/Con-gamberetti.jpg"
+                        alt="Con gamberetti"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Con gamberetti</h4>
+                      <p class="ingredients">
+                        Pasta with shrimps — tomato & garlic sauce.
+                      </p>
+                      <div class="price">$13.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/sadaf.jpg"
+                      class="glightbox"
+                      aria-label="View Linguine alle Vongole"
+                    >
+                      <img
+                        src="../Assets/sadaf.jpg"
+                        alt="Linguine alle Vongole"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Linguine alle Vongole</h4>
+                      <p class="ingredients">
+                        Linguine with clams, white wine & parsley.
+                      </p>
+                      <div class="price">$16.50</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/scolgio.jpg"
+                      class="glightbox"
+                      aria-label="View Spaghetti allo Scoglio"
+                    >
+                      <img
+                        src="../Assets/scolgio.jpg"
+                        alt="Spaghetti allo Scoglio"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Spaghetti allo Scoglio</h4>
+                      <p class="ingredients">
+                        Mixed seafood with spaghetti in light tomato sauce.
+                      </p>
+                      <div class="price">$17.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/pesto2.jpg"
+                      class="glightbox"
+                      aria-label="View Fettuccine al Pesto"
+                    >
+                      <img
+                        src="../Assets/pesto2.jpg"
+                        alt="Fettuccine al Pesto"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Fettuccine al Pesto</h4>
+                      <p class="ingredients">
+                        Fresh basil pesto, pine nuts & parmesan.
+                      </p>
+                      <div class="price">$12.50</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/ravioli.jpg"
+                      class="glightbox"
+                      aria-label="View Ravioli di Ricotta e Spinaci"
+                    >
+                      <img
+                        src="../Assets/ravioli.jpg"
+                        alt="Ravioli di Ricotta e Spinaci"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Ravioli di Ricotta e Spinaci</h4>
+                      <p class="ingredients">Homemade ravioli, sage butter.</p>
+                      <div class="price">$14.95</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Desserts -->
+            <div
+              class="tab-pane fade"
+              id="menu-dessert"
+              role="tabpanel"
+              aria-labelledby="tab-dessert"
+            >
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Desserts</h3>
+              </div>
+
+              <div class="row g-4">
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/tiramisu.jpg"
+                      class="glightbox"
+                      aria-label="View Tiramisu della Casa"
+                    >
+                      <img
+                        src="../Assets/tiramisu.jpg"
+                        alt="Tiramisu della Casa"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Tiramisu della Casa</h4>
+                      <p class="ingredients">
+                        Classic tiramisu with espresso & mascarpone.
+                      </p>
+                      <div class="price">$6.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/panna-cotta.jpg"
+                      class="glightbox"
+                      aria-label="View Panna Cotta"
+                    >
+                      <img
+                        src="../Assets/panna-cotta.jpg"
+                        alt="Panna Cotta"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Panna Cotta</h4>
+                      <p class="ingredients">
+                        Silky vanilla panna cotta with berry coulis.
+                      </p>
+                      <div class="price">$7.25</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/cannoli.jpg"
+                      class="glightbox"
+                      aria-label="View Cannoli Siciliani"
+                    >
+                      <img
+                        src="../Assets/cannoli.jpg"
+                        alt="Cannoli Siciliani"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Cannoli Siciliani</h4>
+                      <p class="ingredients">
+                        Crispy pastry shells filled with sweet ricotta.
+                      </p>
+                      <div class="price">$5.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/gelato.jpg"
+                      class="glightbox"
+                      aria-label="View Gelato al Limone"
+                    >
+                      <img
+                        src="../Assets/gelato.jpg"
+                        alt="Gelato al Limone"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Gelato al Limone</h4>
+                      <p class="ingredients">House-made lemon gelato.</p>
+                      <div class="price">$4.95</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="menu-card">
+                    <a
+                      href="../Assets/torta.jpg"
+                      class="glightbox"
+                      aria-label="View Torta al Cioccolato"
+                    >
+                      <img
+                        src="../Assets/torta.jpg"
+                        alt="Torta al Cioccolato"
+                        class="menu-img img-fluid"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="menu-card-body">
+                      <h4>Torta al Cioccolato</h4>
+                      <p class="ingredients">
+                        Warm chocolate cake with vanilla gelato.
+                      </p>
+                      <div class="price">$7.95</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.alt-container -->
+      </section>
+    </main>
+
+    <footer class="alt-footer" role="contentinfo">
+      <div class="alt-container">
+        <p>© <span id="alt-year">2025</span> La Cucina Del Mare</p>
+        <nav>
+          <a href="../Pages/privacy.html">Privacy</a>
+          <a href="../Pages/terms.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
