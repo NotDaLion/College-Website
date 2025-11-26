@@ -139,6 +139,9 @@ footer{
     border-radius: 64px;
     position: relative;
 }
+#youtube{
+    border-radius: 0px;
+}
 :root {
     /* colors Zyad chose
   --primary: #0b5f8a; /* deep sea blue */
