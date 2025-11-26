@@ -3,41 +3,43 @@
     --accent: #ff8c42;
     --post-color: #ffffff;
     --bg: #e4eef4;
+    --muted: #6a6f73;
     background-color: var(--bg);
 }
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .top{
-    color: var(--primary);
-}
-.top{
+    color: var(--primary); 
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    height: 80px;
+    height: 40px;
     padding: 0 4%;
+    margin: 12px 10%;
 }
 .logoTitle{
+    min-width: 155px;
     display: flex;
-    flex: 1 1 auto;
+    flex: 2;
 }
 .logo-img{
     height: 100%;
 }
 .navBar{
-    display: none;
+    display: block;
 }
 h1{
-    font-size: 26px;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 0px;
 }
 button{
     width: 75px;
     height: 75px;
 }
 hr{
-    height: 0px;
-    border-top-width: 2px;
+    width: 90%;
     border-style: solid;
     border-color: #f3f5ff;
 }
@@ -70,6 +72,7 @@ hr{
 }
 .description{
     flex:1;
+    min-width: 35%;
 }
 .img-div{
     display: flex;
@@ -79,10 +82,46 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
-
-
-
-
+nav{
+    flex: 1;
+}
+.navBar{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 4px;
+}
+a{
+    box-sizing: content-box;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--muted);
+}
+li{
+    padding: 4px;
+    border-color: var(--bg);
+    border-radius: 6px;
+}
+li:hover{
+    border-color: rgba(11, 95, 138, 0.06);
+    background-color: rgba(11, 95, 138, 0.06);
+}
+a:hover{
+    color: var(--primary);
+}
+/*Highlights currently selected page*/
+.cur-page{
+    border-color: rgba(11, 95, 138, 0.06);
+    background-color: rgba(11, 95, 138, 0.06);
+}
+.cur-page a{
+    color: var(--primary);
+}
+@media (max-width: 700px) {
+    .top{
+        margin-left: 0;
+    }
+}
 
 
 :root {
