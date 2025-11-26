@@ -1,0 +1,219 @@
+
+
+:root {
+  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+  --primary: #0b5f8a;
+  --accent: #ff8c42;
+  --muted: #6a6f73;
+  --surface: #ffffff;
+  --card-radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: var(--bg);
+  color: #15292b;
+  -webkit-font-smoothing: antialiased;
+}
+
+.alt-container {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+
+.alt-header {
+  background: rgba(11, 95, 138, 0.06);
+}
+.alt-header .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alt-logo {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.alt-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.alt-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+}
+.alt-nav a.active,
+.alt-nav a:hover {
+  color: var(--primary);
+  background: rgba(11, 95, 138, 0.06);
+}
+
+
+.alt-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.alt-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 0%,     
+      rgba(0, 0, 0, 0.15) 70%
+    ),
+    url('../Assets/seafood4.jpg') center/cover no-repeat;
+}
+
+
+.alt-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0;
+}
+
+.alt-hero h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+}
+
+
+.contact-card {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 1.6rem;
+  box-shadow: 0 12px 30px rgba(20, 40, 40, 0.06);
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.4rem;
+  margin-top: 1rem;
+}
+
+
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin: 0.35rem 0;
+  color: #2b3b3b;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #e7eaec;
+  background: #fbfcfd;
+  margin-bottom: 0.8rem;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.alt-btn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 1.1rem;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.alt-btn.alt-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid rgba(11, 95, 138, 0.25);
+}
+.alt-hero .sub {
+  color: #ebebeb;
+  font-size: xx-large;
+  
+
+  
+}
+
+
+.contact-info {
+  background: rgba(11, 95, 138, 0.04);
+  padding: 0.8rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.contact-info h4 {
+  margin: 0.2rem 0 0.3rem;
+  color: var(--primary);
+}
+.contact-info div {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+
+.alt-footer {
+  background: rgba(11, 95, 138, 0.06);
+  padding: 1.4rem 0;
+}
+.alt-footer .alt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alt-footer a {
+  margin-right: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+
+.alt-success {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+.alt-success[aria-hidden="false"] {
+  display: flex;
+}
+.alt-success .box {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 420px;
+  width: 92%;
+  text-align: center;
+}
+
+
+@media (max-width: 860px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+  .alt-footer .alt-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
