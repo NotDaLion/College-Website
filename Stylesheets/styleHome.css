@@ -56,6 +56,9 @@ hr{
     background-color: var(--post-color);
     box-shadow: 0 12px 30px rgba(20,40,40,0.06);
 }
+.shift-right{
+    margin-left: 12px;
+}
 .post img{
     height: 300px;
     margin: 12px;
