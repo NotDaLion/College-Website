@@ -122,8 +122,23 @@ a:hover{
         margin-left: 0;
     }
 }
-
-
+footer{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.social-media{
+    display: flex;
+    gap: 16px;
+}
+.social-img{
+    height: 50px;
+    border-color: var(--post-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 64px;
+    position: relative;
+}
 :root {
     /* colors Zyad chose
   --primary: #0b5f8a; /* deep sea blue */
