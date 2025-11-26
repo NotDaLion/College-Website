@@ -1,0 +1,12 @@
+:root{
+    --primary: #0b5f8a;
+    --post-color: #ffffff;
+}
+:root {
+  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+  --primary: #0b5f8a; /* deep sea blue */
+  --accent: #ff8c42; /* coral */
+  --muted: #6a6f73;
+  --surface: #ffffff;
+  --card-radius: 14px;
+}
