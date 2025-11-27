@@ -1,12 +1,153 @@
 :root{
     --primary: #0b5f8a;
+    --accent: #ff8c42;
     --post-color: #ffffff;
+    --bg: #e4eef4;
+    --muted: #6a6f73;
+    background-color: var(--bg);
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.top{
+    color: var(--primary); 
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    height: 40px;
+    padding: 0 4%;
+    margin: 12px 10%;
+}
+.logoTitle{
+    min-width: 155px;
+    display: flex;
+    flex: 2;
+}
+.logo-img{
+    height: 100%;
+}
+.navBar{
+    display: block;
+}
+h1{
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+}
+button{
+    width: 75px;
+    height: 75px;
+}
+hr{
+    width: 90%;
+    border-style: solid;
+    border-color: #f3f5ff;
+}
+.post{
+    flex: 1 1 auto;
+    min-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    justify-content: center;
+    max-height: 600px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--post-color);
+    border-radius: 4px;
+    background-color: var(--post-color);
+    box-shadow: 0 12px 30px rgba(20,40,40,0.06);
+}
+.shift-right{
+    margin-left: 12px;
+}
+.post img{
+    height: 300px;
+    margin: 12px;
+    border-width: 4px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--post-color);
+
+}
+.description{
+    flex:1;
+    min-width: 35%;
+}
+.img-div{
+    display: flex;
+
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav{
+    flex: 1;
+}
+.navBar{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 4px;
+}
+a{
+    box-sizing: content-box;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--muted);
+}
+li{
+    padding: 4px;
+    border-color: var(--bg);
+    border-radius: 6px;
+}
+li:hover{
+    border-color: rgba(11, 95, 138, 0.06);
+    background-color: rgba(11, 95, 138, 0.06);
+}
+a:hover{
+    color: var(--primary);
+}
+/*Highlights currently selected page*/
+.cur-page{
+    border-color: rgba(11, 95, 138, 0.06);
+    background-color: rgba(11, 95, 138, 0.06);
+}
+.cur-page a{
+    color: var(--primary);
+}
+@media (max-width: 700px) {
+    .top{
+        margin-left: 0;
+    }
+}
+footer{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.social-media{
+    display: flex;
+    gap: 16px;
+}
+.social-img{
+    height: 50px;
+    border-color: var(--post-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 64px;
+    position: relative;
+}
+#youtube{
+    border-radius: 0px;
 }
 :root {
-  --bg: linear-gradient(180deg, #f1f7fb 0%, #fffefc 100%);
+    /* colors Zyad chose
   --primary: #0b5f8a; /* deep sea blue */
-  --accent: #ff8c42; /* coral */
-  --muted: #6a6f73;
+  /*--accent: #ff8c42; /* coral */
+  /*--muted: #6a6f73;
   --surface: #ffffff;
   --card-radius: 14px;
+  */
 }
