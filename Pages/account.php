@@ -29,7 +29,7 @@ $userName = $_SESSION["user_name"];
     <a class="alt-logo" href="/">La Cucina Del Mare</a>
     <nav class="alt-nav">
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="../Pages/index.html">Home</a></li>
         <li><a href="../Pages/Menu.html">Menu</a></li>
         <li><a href="../Pages/about-alt.html">About</a></li>
         <li><a href="../Pages/contact.html">Contact</a></li>
