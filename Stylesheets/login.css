@@ -1,0 +1,85 @@
+/* login.css — matches Menu.css variables and style */
+
+.login-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+.login-success {
+  background: rgba(11, 95, 138, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(11, 95, 138, 0.25);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.login-card {
+  background: var(--glass);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 18px 40px rgba(11, 95, 138, 0.08);
+}
+
+.login-card h2 {
+  margin: 0;
+  color: var(--primary);
+  text-align: center;
+}
+
+.login-sub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.login-card label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-top: 0.8rem;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #e7eaec;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 0.7rem;
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.login-btn:hover {
+  background: #094c6f;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
