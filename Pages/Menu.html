@@ -19,11 +19,22 @@
         >
         <nav class="alt-nav" role="navigation" aria-label="Main navigation">
           <ul>
+<<<<<<< Updated upstream
             <li><a href="../Pages/index.html">Home</a></li>
             <li><a href="../Pages/Menu.html" class="active">Menu</a></li>
             <li><a href="../Pages/about-alt.html">About</a></li>
             <li><a href="../Pages/contact.html">Contact</a></li>
           </ul>
+=======
+  <li><a href="/">Home</a></li>
+  <li><a href="../Pages/Menu.html" class="active">Menu</a></li>
+  <li><a href="../Pages/about-alt.html">About</a></li>
+  <li><a href="../Pages/contact.html">Contact</a></li>
+  <li><a href="../Pages/cart.php">Cart</a></li>
+  <li><a href="../Pages/account.php">Account</a></li>
+</ul>
+
+>>>>>>> Stashed changes
         </nav>
       </div>
     </header>
@@ -130,14 +141,16 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>
-                        Calamari Fritti <span class="badge-fresh">Chef's</span>
-                      </h4>
-                      <p class="ingredients">
-                        Lightly fried squid served with lemon & garlic aioli.
-                      </p>
-                      <div class="price">$9.95</div>
-                    </div>
+                      <h4>Calamari Fritti <span class="badge-fresh">Chef's</span></h4>
+  <p class="ingredients">Lightly fried squid served with lemon & garlic aioli.</p>
+  <div class="price">$9.95</div>
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="1">
+    <input type="hidden" name="name" value="Calamari Fritti">
+    <input type="hidden" name="price" value="9.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
                   </div>
                 </article>
 
@@ -157,12 +170,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Gamberetti al Limone</h4>
-                      <p class="ingredients">
-                        Sautéed prawns with garlic, fresh lemon & parsley.
-                      </p>
-                      <div class="price">$11.95</div>
-                    </div>
+  <h4>Gamberetti al Limone</h4>
+  <p class="ingredients">Sautéed prawns with garlic, fresh lemon & parsley.</p>
+  <div class="price">$11.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="2">
+    <input type="hidden" name="name" value="Gamberetti al Limone">
+    <input type="hidden" name="price" value="11.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -182,12 +201,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Cozze alla Marinara</h4>
-                      <p class="ingredients">
-                        Mussels simmered in tomato, garlic & white wine.
-                      </p>
-                      <div class="price">$12.95</div>
-                    </div>
+  <h4>Cozze alla Marinara</h4>
+  <p class="ingredients">Mussels simmered in tomato, garlic & white wine.</p>
+  <div class="price">$12.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="3">
+    <input type="hidden" name="name" value="Cozze alla Marinara">
+    <input type="hidden" name="price" value="12.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -205,12 +230,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Bruschetta al Pomodoro</h4>
-                      <p class="ingredients">
-                        Grilled bread with tomato, basil & olive oil.
-                      </p>
-                      <div class="price">$7.95</div>
-                    </div>
+  <h4>Bruschetta al Pomodoro</h4>
+  <p class="ingredients">Grilled bread with tomato, basil & olive oil.</p>
+  <div class="price">$7.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="4">
+    <input type="hidden" name="name" value="Bruschetta al Pomodoro">
+    <input type="hidden" name="price" value="7.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -225,12 +256,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Insalata di Mare</h4>
-                      <p class="ingredients">
-                        Mixed seafood salad with citrus dressing.
-                      </p>
-                      <div class="price">$13.95</div>
-                    </div>
+  <h4>Insalata di Mare</h4>
+  <p class="ingredients">Mixed seafood salad with citrus dressing.</p>
+  <div class="price">$13.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="5">
+    <input type="hidden" name="name" value="Insalata di Mare">
+    <input type="hidden" name="price" value="13.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -245,12 +282,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Focaccia al Rosmarino</h4>
-                      <p class="ingredients">
-                        House rosemary focaccia, sea salt.
-                      </p>
-                      <div class="price">$5.95</div>
-                    </div>
+  <h4>Focaccia al Rosmarino</h4>
+  <p class="ingredients">House rosemary focaccia, sea salt.</p>
+  <div class="price">$5.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="6">
+    <input type="hidden" name="name" value="Focaccia al Rosmarino">
+    <input type="hidden" name="price" value="5.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
               </div>
@@ -283,12 +326,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Gamberi alla griglia</h4>
-                      <p class="ingredients">
-                        Grilled shrimp with herb butter & lemon.
-                      </p>
-                      <div class="price">$15.95</div>
-                    </div>
+  <h4>Gamberi alla griglia</h4>
+  <p class="ingredients">Grilled shrimp with herb butter & lemon.</p>
+  <div class="price">$15.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="7">
+    <input type="hidden" name="name" value="Gamberi alla griglia">
+    <input type="hidden" name="price" value="15.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -307,12 +356,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Branzino al Forno</h4>
-                      <p class="ingredients">
-                        Whole sea bass roasted with rosemary & lemon.
-                      </p>
-                      <div class="price">$22.95</div>
-                    </div>
+  <h4>Branzino al Forno</h4>
+  <p class="ingredients">Whole sea bass roasted with rosemary & lemon.</p>
+  <div class="price">$22.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="8">
+    <input type="hidden" name="name" value="Branzino al Forno">
+    <input type="hidden" name="price" value="22.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -331,12 +386,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Zuppa di Pesce</h4>
-                      <p class="ingredients">
-                        Hearty fish soup with mussels, clams & prawns.
-                      </p>
-                      <div class="price">$18.50</div>
-                    </div>
+  <h4>Zuppa di Pesce</h4>
+  <p class="ingredients">Hearty fish soup with mussels, clams & prawns.</p>
+  <div class="price">$18.50</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="9">
+    <input type="hidden" name="name" value="Zuppa di Pesce">
+    <input type="hidden" name="price" value="18.50">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -355,13 +416,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Sinfonia di Salmone</h4>
-                      <p class="ingredients">
-                        Fresh and smoked salmon with lemon, herbs, and house
-                        sauces.
-                      </p>
-                      <div class="price">$19.95</div>
-                    </div>
+  <h4>Sinfonia di Salmone</h4>
+  <p class="ingredients">Fresh and smoked salmon with lemon, herbs, and house sauces.</p>
+  <div class="price">$19.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="10">
+    <input type="hidden" name="name" value="Sinfonia di Salmone">
+    <input type="hidden" name="price" value="19.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -379,13 +445,19 @@
                         loading="lazy"
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>Grigliata di Pesce</h4>
-                      <p class="ingredients">
-                        Mixed seafood grill — seasonal selection.
-                      </p>
-                      <div class="price">$28.95</div>
-                    </div>
+                   <div class="menu-card-body">
+  <h4>Grigliata di Pesce</h4>
+  <p class="ingredients">Mixed seafood grill — seasonal selection.</p>
+  <div class="price">$28.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="11">
+    <input type="hidden" name="name" value="Grigliata di Pesce">
+    <input type="hidden" name="price" value="28.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
               </div>
@@ -419,12 +491,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Con gamberetti</h4>
-                      <p class="ingredients">
-                        Pasta with shrimps — tomato & garlic sauce.
-                      </p>
-                      <div class="price">$13.95</div>
-                    </div>
+  <h4>Con gamberetti</h4>
+  <p class="ingredients">Pasta with shrimps — tomato & garlic sauce.</p>
+  <div class="price">$13.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="12">
+    <input type="hidden" name="name" value="Con gamberetti">
+    <input type="hidden" name="price" value="13.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -443,12 +521,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Linguine alle Vongole</h4>
-                      <p class="ingredients">
-                        Linguine with clams, white wine & parsley.
-                      </p>
-                      <div class="price">$16.50</div>
-                    </div>
+  <h4>Linguine alle Vongole</h4>
+  <p class="ingredients">Linguine with clams, white wine & parsley.</p>
+  <div class="price">$16.50</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="13">
+    <input type="hidden" name="name" value="Linguine alle Vongole">
+    <input type="hidden" name="price" value="16.50">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -467,12 +551,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Spaghetti allo Scoglio</h4>
-                      <p class="ingredients">
-                        Mixed seafood with spaghetti in light tomato sauce.
-                      </p>
-                      <div class="price">$17.95</div>
-                    </div>
+  <h4>Spaghetti allo Scoglio</h4>
+  <p class="ingredients">Mixed seafood with spaghetti in light tomato sauce.</p>
+  <div class="price">$17.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="14">
+    <input type="hidden" name="name" value="Spaghetti allo Scoglio">
+    <input type="hidden" name="price" value="17.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -491,12 +581,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Fettuccine al Pesto</h4>
-                      <p class="ingredients">
-                        Fresh basil pesto, pine nuts & parmesan.
-                      </p>
-                      <div class="price">$12.50</div>
-                    </div>
+  <h4>Fettuccine al Pesto</h4>
+  <p class="ingredients">Fresh basil pesto, pine nuts & parmesan.</p>
+  <div class="price">$12.50</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="15">
+    <input type="hidden" name="name" value="Fettuccine al Pesto">
+    <input type="hidden" name="price" value="12.50">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -515,10 +611,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Ravioli di Ricotta e Spinaci</h4>
-                      <p class="ingredients">Homemade ravioli, sage butter.</p>
-                      <div class="price">$14.95</div>
-                    </div>
+  <h4>Ravioli di Ricotta e Spinaci</h4>
+  <p class="ingredients">Homemade ravioli, sage butter.</p>
+  <div class="price">$14.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="16">
+    <input type="hidden" name="name" value="Ravioli di Ricotta e Spinaci">
+    <input type="hidden" name="price" value="14.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
               </div>
@@ -551,13 +655,19 @@
                         loading="lazy"
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>Tiramisu della Casa</h4>
-                      <p class="ingredients">
-                        Classic tiramisu with espresso & mascarpone.
-                      </p>
-                      <div class="price">$6.95</div>
-                    </div>
+                   <div class="menu-card-body">
+  <h4>Tiramisu della Casa</h4>
+  <p class="ingredients">Classic tiramisu with espresso & mascarpone.</p>
+  <div class="price">$6.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="17">
+    <input type="hidden" name="name" value="Tiramisu della Casa">
+    <input type="hidden" name="price" value="6.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -575,13 +685,19 @@
                         loading="lazy"
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>Panna Cotta</h4>
-                      <p class="ingredients">
-                        Silky vanilla panna cotta with berry coulis.
-                      </p>
-                      <div class="price">$7.25</div>
-                    </div>
+                   <div class="menu-card-body">
+  <h4>Panna Cotta</h4>
+  <p class="ingredients">Silky vanilla panna cotta with berry coulis.</p>
+  <div class="price">$7.25</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="18">
+    <input type="hidden" name="name" value="Panna Cotta">
+    <input type="hidden" name="price" value="7.25">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -600,12 +716,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Cannoli Siciliani</h4>
-                      <p class="ingredients">
-                        Crispy pastry shells filled with sweet ricotta.
-                      </p>
-                      <div class="price">$5.95</div>
-                    </div>
+  <h4>Cannoli Siciliani</h4>
+  <p class="ingredients">Crispy pastry shells filled with sweet ricotta.</p>
+  <div class="price">$5.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="19">
+    <input type="hidden" name="name" value="Cannoli Siciliani">
+    <input type="hidden" name="price" value="5.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -624,10 +746,18 @@
                       />
                     </a>
                     <div class="menu-card-body">
-                      <h4>Gelato al Limone</h4>
-                      <p class="ingredients">House-made lemon gelato.</p>
-                      <div class="price">$4.95</div>
-                    </div>
+  <h4>Gelato al Limone</h4>
+  <p class="ingredients">House-made lemon gelato.</p>
+  <div class="price">$4.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="20">
+    <input type="hidden" name="name" value="Gelato al Limone">
+    <input type="hidden" name="price" value="4.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
 
@@ -645,13 +775,19 @@
                         loading="lazy"
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>Torta al Cioccolato</h4>
-                      <p class="ingredients">
-                        Warm chocolate cake with vanilla gelato.
-                      </p>
-                      <div class="price">$7.95</div>
-                    </div>
+                   <div class="menu-card-body">
+  <h4>Torta al Cioccolato</h4>
+  <p class="ingredients">Warm chocolate cake with vanilla gelato.</p>
+  <div class="price">$7.95</div>
+
+  <form action="../Backend/add_to_cart.php" method="POST" class="mt-2">
+    <input type="hidden" name="id" value="21">
+    <input type="hidden" name="name" value="Torta al Cioccolato">
+    <input type="hidden" name="price" value="7.95">
+    <button type="submit" class="btn btn-sm btn-outline-primary w-100">Add to Cart</button>
+  </form>
+</div>
+
                   </div>
                 </article>
               </div>
