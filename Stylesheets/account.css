@@ -1,0 +1,67 @@
+.account-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: #f7fbfe;
+}
+
+.account-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 2.5rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(11,95,138,0.08);
+}
+
+.account-card h2 {
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.account-sub {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.account-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-box {
+  background: rgba(11,95,138,0.05);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.info-box h4 {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.info-box p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.account-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.account-btn:hover {
+  background: #084e73;
+}
