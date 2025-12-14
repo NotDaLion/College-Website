@@ -21,7 +21,7 @@
             <li><a href="../Pages/index.html">Home</a></li>
             <li><a href="../Pages/Menu.html">Menu</a></li>
             <li><a href="../Pages/about-alt.html">About</a></li>
-            <li><a href="../Pages/contact.html" class="active">Contact</a></li>
+            <li><a href="../Backend/contact.php" class="active">Contact</a></li>
             <li><a href="../Pages/cart.php">Cart</a></li>
             <li><a href="../Pages/account.php">Account</a></li>
           </ul>
@@ -50,7 +50,7 @@
               for urgent requests).
             </p>
 
-            <form id="contactForm" class="contact-form" novalidate>
+           <form id="contactForm" class="contact-form" method="post" action="contact.php" novalidate>
               <label for="name">Full name</label>
               <input
                 id="name"
@@ -154,5 +154,6 @@
     </div>
 
     <script src="../Scripts/contact.js"></script>
+
   </body>
 </html>
