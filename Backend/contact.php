@@ -1,5 +1,4 @@
  <?php
-// Only run if form submitted
 if (isset($_POST['full_name'], $_POST['email'], $_POST['message'])) {
 
 
