@@ -1,22 +1,32 @@
 <?php
-session_start();
+require "db.php";
 
-if (!isset($_SESSION["cart"])) {
-    $_SESSION["cart"] = [];
-}
+$product_id = $_POST['id'];
+$session_id = session_id();
 
-$id    = $_POST["id"];
-$name  = $_POST["name"];
-$price = (float)$_POST["price"];
+/* Check if item already in cart */
+$stmt = $pdo->prepare(
+    "SELECT id FROM cart 
+     WHERE session_id = ? AND product_id = ?"
+);
+$stmt->execute([$session_id, $product_id]);
 
-if (isset($_SESSION["cart"][$id])) {
-    $_SESSION["cart"][$id]["qty"] += 1;
+if ($stmt->rowCount() > 0) {
+    // Increase quantity
+    $update = $pdo->prepare(
+        "UPDATE cart 
+         SET quantity = quantity + 1 
+         WHERE session_id = ? AND product_id = ?"
+    );
+    $update->execute([$session_id, $product_id]);
 } else {
-    $_SESSION["cart"][$id] = [
-        "name"  => $name,
-        "price" => $price,
-        "qty"   => 1
-    ];
+    // Insert new item
+    $insert = $pdo->prepare(
+        "INSERT INTO cart (session_id, product_id, quantity)
+         VALUES (?, ?, 1)"
+    );
+    $insert->execute([$session_id, $product_id]);
 }
 
-echo "ok";
+header("Location: ../Pages/cart.php");
+exit;
