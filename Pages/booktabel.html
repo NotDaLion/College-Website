@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book a table - La Cucina Del Mare</title>
+    <link rel="stylesheet" href="../Stylesheets/booktable.css" />
+    <link rel="icon" type="image/x-icon" href="../Assets/prawn.png" />
+  </head>
+  <body>
+    <header class="alt-header" role="banner">
+      <div class="alt-container">
+        <a
+          class="alt-logo"
+          href="../Pages/index.html"
+          aria-label="La Cucina Del Mare homepage"
+          >La Cucina Del Mare</a
+        >
+        <nav class="alt-nav" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="../Pages/index.html">Home</a></li>
+            <li><a href="../Pages/Menu.html">Menu</a></li>
+            <li><a href="../Pages/about-alt.html">About</a></li>
+            <li><a href="../Pages/contact.html" class="active">Contact</a></li>
+            <li><a href="../Pages/cart.php">Cart</a></li>
+            <li><a href="../Pages/account.php">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="alt-main">
+      <section class="alt-hero">
+        <div class="alt-overlay"></div>
+        <div class="alt-hero-inner alt-container">
+          <h1>Book a table</h1>
+          <p class="sub">
+            Reserve your spot — choose date, time and party size. We’ll confirm
+            by email or phone.
+          </p>
+        </div>
+      </section>
+
+      <section class="alt-about alt-container" id="booking">
+        <div class="contact-card booking-grid">
+          <div>
+            <h2>Reserve a table</h2>
+            <p class="alt-note">
+              Fill the form below and we will confirm your reservation. For
+              urgent requests call us.
+            </p>
+
+            <form id="bookingForm" class="booking-form" novalidate>
+              <label for="b-name">Full name</label>
+              <input
+                id="b-name"
+                name="name"
+                type="text"
+                required
+                placeholder="Your full name"
+              />
+
+              <label for="b-email">Email</label>
+              <input
+                id="b-email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+              />
+
+              <label for="b-phone">Phone</label>
+              <input
+                id="b-phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="+20 1X XXX XXXX"
+              />
+
+              <div class="row">
+                <div class="col">
+                  <label for="b-date">Date</label>
+                  <input id="b-date" name="date" type="date" required />
+                </div>
+                <div class="col">
+                  <label for="b-time">Time</label>
+                  <input id="b-time" name="time" type="time" required />
+                </div>
+              </div>
+
+              <label for="b-size">Party size</label>
+              <select id="b-size" name="size" required>
+                <option value="">Select size</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+
+              <label for="b-seating">Seating preference (optional)</label>
+              <select id="b-seating" name="seating">
+                <option value="">No preference</option>
+                <option>Indoor</option>
+                <option>Outdoor</option>
+                <option>Window</option>
+                <option>Quiet corner</option>
+              </select>
+
+              <label for="b-requests"
+                >Special requests (allergies, celebrations)</label
+              >
+              <textarea
+                id="b-requests"
+                name="requests"
+                placeholder="Tell us anything special..."
+              ></textarea>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 0.5rem;
+                  align-items: center;
+                  margin-top: 0.4rem;
+                "
+              >
+                <button type="submit" class="alt-btn">
+                  Request reservation
+                </button>
+                <button type="reset" class="alt-btn alt-outline">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="contact-info" aria-label="Booking information">
+            <h4>Need help with a booking?</h4>
+            <div class="contact-meta">
+              <div>
+                <strong>Phone</strong>
+                <div>+20 12 3456 7890</div>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <div>hello@lacucinadelmare.example</div>
+              </div>
+              <div>
+                <strong>Address</strong>
+                <div>12 Harbor Lane, Old Town</div>
+              </div>
+            </div>
+
+            <p class="alt-note">
+              Open daily 12:00 — 23:00. For private events or group bookings
+              over 10 please call.
+            </p>
+
+            <div style="margin-top: 0.6rem">
+              <a class="alt-btn" href="../Pages/contact.html">Contact</a>
+              <a
+                style="margin-left: 0.5rem"
+                class="alt-btn alt-outline"
+                href="../Pages/Menu.html"
+                >View menu</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="alt-footer">
+      <div class="alt-container">
+        <p>&copy; <span id="alt-year">2025</span> La Cucina Del Mare</p>
+        <nav>
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div id="bookingSuccess" class="alt-success" aria-hidden="true">
+      <div
+        class="box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="bsTitle"
+      >
+        <h3 id="bsTitle">Reservation received</h3>
+        <p>
+          Thanks! Your reservation request has been received. We'll confirm by
+          email or phone shortly.
+        </p>
+        <button id="closeBooking" class="alt-btn">OK</button>
+      </div>
+    </div>
+
+    <script src="../Scripts/booktable.js"></script>
+  </body>
+</html>
