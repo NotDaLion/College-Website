@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $stmt->fetch();
 
     if ($user) {
-
         if (password_verify($pass, $user["password"])) {
 
             // Login success
