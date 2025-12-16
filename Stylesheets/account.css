@@ -65,3 +65,49 @@
 .account-btn:hover {
   background: #084e73;
 }
+
+/* Make info boxes clickable */
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.password-form input {
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #0a5c85;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0a7c3a;
+}
+/* clickable info boxes */
+.info-link {
+  text-decoration: none;   /* REMOVE underline */
+  color: inherit;          /* keep same color */
+  display: block;
+}
+
+.info-link:hover {
+  text-decoration: none;   /* ensure no underline on hover */
+  transform: translateY(-4px);
+}
+

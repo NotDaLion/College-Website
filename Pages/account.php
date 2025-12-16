@@ -47,21 +47,24 @@ $userName = $_SESSION["user_name"];
     <p class="account-sub">Welcome to your account</p>
 
     <div class="account-info">
-      <div class="info-box">
-        <h4>Orders</h4>
-        <p>View your past orders</p>
-      </div>
+  <a href="orders.php" class="info-box info-link">
+  <h4>Orders</h4>
+  <p>View your past orders</p>
+</a>
 
-      <div class="info-box">
-        <h4>Profile</h4>
-        <p>Manage your personal info</p>
-      </div>
 
-      <div class="info-box">
-        <h4>Security</h4>
-        <p>Change password</p>
-      </div>
-    </div>
+  <a href="profile.php" class="info-box info-link">
+  <h4>Profile</h4>
+  <p>Manage your personal info</p>
+</a>
+
+  <a href="change_password.php" class="info-box info-link">
+    <h4>Security</h4>
+    <p>Change password</p>
+  </a>
+</div>
+
+     
 
     <a href="../Pages/Menu.html" class="account-btn">
       Browse Menu
