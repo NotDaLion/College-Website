@@ -4,24 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact - La Cucina Del Mare</title>
+
     <link rel="stylesheet" href="../Stylesheets/contact.css" />
-    <link rel="icon" type="image/x-icon" href="../Assets/prawn.png" />
+    <link rel="icon" href="../Assets/prawn.png" />
   </head>
+
   <body>
-    <header class="alt-header" role="banner">
+  
+    <header class="alt-header">
       <div class="alt-container">
-        <a
-          class="alt-logo"
-          href="../Pages/index.html"
-          aria-label="La Cucina Del Mare homepage"
-          >La Cucina Del Mare</a
-        >
-        <nav class="alt-nav" role="navigation" aria-label="Main navigation">
+        <a class="alt-logo" href="../Pages/index.html">
+          La Cucina Del Mare
+        </a>
+
+        <nav class="alt-nav">
           <ul>
             <li><a href="../Pages/index.html">Home</a></li>
             <li><a href="../Pages/Menu.html">Menu</a></li>
             <li><a href="../Pages/about-alt.html">About</a></li>
-            <li><a href="../Backend/contact.php" class="active">Contact</a></li>
+            <li>
+              <a href="../Backend/contact.php" class="active">Contact</a>
+            </li>
             <li><a href="../Pages/cart.php">Cart</a></li>
             <li><a href="../Pages/account.php">Account</a></li>
           </ul>
@@ -29,9 +32,12 @@
       </div>
     </header>
 
+    
     <main class="alt-main">
+     
       <section class="alt-hero">
         <div class="alt-overlay"></div>
+
         <div class="alt-hero-inner alt-container">
           <h1>Get in touch</h1>
           <p class="sub">
@@ -41,16 +47,24 @@
         </div>
       </section>
 
+     
       <section class="alt-about alt-container" id="contact">
         <div class="contact-card">
+        
           <div>
             <h2>Contact Us</h2>
             <p class="alt-note">
-              Fill out the form and we'll respond within 24 hours (or call us
-              for urgent requests).
+              Fill out the form and we'll respond within 24 hours
+              (or call us for urgent requests).
             </p>
 
-           <form id="contactForm" class="contact-form" method="post" action="contact.php" novalidate>
+            <form
+              id="contactForm"
+              class="contact-form"
+              method="post"
+              action="contact.php"
+              novalidate
+            >
               <label for="name">Full name</label>
               <input
                 id="name"
@@ -85,24 +99,31 @@
                 placeholder="Tell us about your request..."
               ></textarea>
 
-              <div style="display: flex; gap: 0.5rem; align-items: center">
-                <button type="submit" class="alt-btn">Send message</button>
-                <button type="reset" class="alt-btn alt-outline">Reset</button>
+              <div style="display: flex; gap: 0.5rem">
+                <button type="submit" class="alt-btn">
+                  Send message
+                </button>
+                <button type="reset" class="alt-btn alt-outline">
+                  Reset
+                </button>
               </div>
             </form>
           </div>
 
-          <aside class="contact-info" aria-label="Contact information">
+          <aside class="contact-info">
             <h4>Reserve a table</h4>
+
             <div class="contact-meta">
               <div>
                 <strong>Phone</strong>
                 <div>+20 12 3456 7890</div>
               </div>
+
               <div>
                 <strong>Email</strong>
                 <div>hello@lacucinadelmare</div>
               </div>
+
               <div>
                 <strong>Address</strong>
                 <div>12 Harbor Lane, Liverpool</div>
@@ -110,29 +131,37 @@
             </div>
 
             <p class="alt-note">
-              Open daily 12:00 — 23:00. For large groups or private events,
-              please call.
+              Open daily 12:00 — 23:00.
+              For large groups or private events, please call.
             </p>
 
             <div style="margin-top: 0.6rem">
-              <a class="alt-btn" href="../Pages/booktabel.html" id="bookLink"
-                >Book a table</a
-              >
               <a
-                style="margin-left: 0.5rem"
+                class="alt-btn"
+                href="../Pages/booktabel.html"
+                id="bookLink"
+              >
+                Book a table
+              </a>
+
+              <a
                 class="alt-btn alt-outline"
                 href="../Pages/Menu.html"
-                >See menu</a
+                style="margin-left: 0.5rem"
               >
+                See menu
+              </a>
             </div>
           </aside>
         </div>
       </section>
     </main>
 
+  
     <footer class="alt-footer">
       <div class="alt-container">
         <p>&copy; <span id="alt-year">2025</span> La Cucina Del Mare</p>
+
         <nav>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
@@ -140,20 +169,16 @@
       </div>
     </footer>
 
-    <div id="success" class="alt-success" aria-hidden="true">
-      <div
-        class="box"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="successTitle"
-      >
-        <h3 id="successTitle">Message sent</h3>
+   
+    <div id="success" class="alt-success">
+      <div class="box">
+        <h3>Message sent</h3>
         <p>Thanks! Your message has been prepared.</p>
         <button id="closeSuccess" class="alt-btn">OK</button>
       </div>
     </div>
 
+   
     <script src="../Scripts/contact.js"></script>
-
   </body>
 </html>

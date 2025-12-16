@@ -1,6 +1,6 @@
 <?php
 require "../Backend/db.php";
-
+session_start();
 $session_id = session_id();
 
 $stmt = $pdo->prepare(
@@ -255,9 +255,10 @@ foreach ($items as $item):
         Total: $<?= number_format($grand_total, 2) ?>
     </div>
 
-    <a class="btn btn-accent" href="#">
-        Proceed to Checkout
-    </a>
+   <a class="btn btn-accent" href="checkout.php">
+    Proceed to Checkout
+</a>
+
 </div>
 
 <?php endif; ?>
