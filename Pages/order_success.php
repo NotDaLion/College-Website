@@ -3,8 +3,19 @@
 <head>
 <title>Order Placed</title>
 <style>
-body{font-family:system-ui;background:#e4eef4;text-align:center;padding:80px}
-a{display:inline-block;margin-top:20px;color:#0b5f8a;text-decoration:none;font-weight:600}
+body{
+  font-family:system-ui;
+  background:#e4eef4;
+  text-align:center;
+  padding:10vh;
+}
+a{
+  display:inline-block;
+  margin-top:2.5vh;
+  color:#0b5f8a;
+  text-decoration:none;
+  font-weight:600;
+}
 </style>
 </head>
 
