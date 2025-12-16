@@ -29,9 +29,26 @@ foreach ($items as $item) {
 <head>
 <title>Checkout</title>
 <style>
-body{font-family:system-ui;background:#e4eef4;padding:40px}
-.box{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:12px}
-button{background:#ff8c42;color:#fff;border:none;padding:12px 20px;border-radius:8px;font-weight:600}
+body{
+  font-family:system-ui;
+  background:#e4eef4;
+  padding:5vh;
+}
+.box{
+  max-width:38rem;
+  margin:auto;
+  background:#fff;
+  padding:4vh;
+  border-radius:1rem;
+}
+button{
+  background:#ff8c42;
+  color:#fff;
+  border:none;
+  padding:0.8em 1.4em;
+  border-radius:0.6em;
+  font-weight:600;
+}
 </style>
 </head>
 <body>
@@ -54,3 +71,4 @@ button{background:#ff8c42;color:#fff;border:none;padding:12px 20px;border-radius
 
 </body>
 </html>
+
