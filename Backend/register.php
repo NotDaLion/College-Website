@@ -11,17 +11,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("All fields required");
     }
 
-    // Hash password
+
     $hashed = password_hash($pass, PASSWORD_DEFAULT);
 
     try {
-        // Prepare SQL
+      
         $stmt = $pdo->prepare(
             "INSERT INTO users (full_name, email, password)
              VALUES (:name, :email, :password)"
         );
 
-        // Execute with named parameters
+       
         $stmt->execute([
             ":name"     => $name,
             ":email"    => $email,
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
 
     } catch (PDOException $e) {
-        // Duplicate email (UNIQUE constraint)
+       
         if ($e->getCode() == 23000) {
             echo "Email already exists";
         } else {

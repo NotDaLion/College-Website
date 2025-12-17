@@ -1,4 +1,4 @@
-// Auto year
+
 document.getElementById('alt-year').textContent =
   new Date().getFullYear();
 

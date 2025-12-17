@@ -11,14 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("All fields required");
     }
 
-    // Prepare SQL
+ 
     $stmt = $pdo->prepare(
         "SELECT id, full_name, password 
          FROM users 
          WHERE email = :email"
     );
 
-    // Execute with named parameter
+  
     $stmt->execute([
         ":email" => $email
     ]);
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if (password_verify($pass, $user["password"])) {
 
-            // Login success
+           
             $_SESSION["user_id"]   = $user["id"];
             $_SESSION["user_name"] = $user["full_name"];
 
