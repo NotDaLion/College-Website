@@ -12,6 +12,7 @@ session_start();
     <title>Contact - La Cucina Del Mare</title>
     <link rel="stylesheet" href="../Stylesheets/contact.css" />
     <link rel="icon" type="image/x-icon" href="../Assets/prawn.png" />
+    <script src="../"></script>
   </head>
   <body>
     <header class="alt-header" role="banner">
@@ -53,8 +54,8 @@ session_start();
                   <option value="delete">Delete</option>
                 </select> 
 
-              <label for="name">Product Name</label>
-              <input
+              <label for="name" class="cls-name">Product Name</label>
+              <input class="cls-name"
                 id="name"
                 name="name"
                 type="text"
@@ -62,8 +63,8 @@ session_start();
                 placeholder="Product Name"
               />
 
-              <label for="price">Product Price</label>
-              <input
+              <label for="price" class="cls-price">Product Price</label>
+              <input class="cls-price"
                 id="price"
                 name="price"
                 type="number"
@@ -71,8 +72,8 @@ session_start();
                 placeholder="Product Price"
               />
 
-              <label for="image">Image Link</label>
-              <input
+              <label for="image" class="cls-img">Image Link</label>
+              <input class="cls-img"
                 id="image"
                 name="image"
                 type="text"
@@ -80,8 +81,9 @@ session_start();
                 placeholder="Link to image"
               />
 
-              <label for="category">Category</label>
+              <label for="category" class = "cls-cat">Category</label>
               <input
+                class = "cls-cat"
                 id="category"
                 name="category"
                 type="text"
@@ -89,8 +91,8 @@ session_start();
                 placeholder="starters/seafood/pasta/dessert"
               />    
 
-              <label for="desc">Description</label>
-              <textarea
+              <label for="desc" class="cls-desc">Description</label>
+              <textarea class = "cls-desc"
                 id="desc"
                 name="desc"
                 placeholder="Enter new description..."
