@@ -1,10 +1,11 @@
 <?php
 session_start();
 require "../Backend/db.php";
-$role = $_SESSION["role"];
-if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
-  header("Location: ../Backend/admin-menu.php");
+if (isset($_SESSION["role"]) && $_SESSION["role"] === "admin") {
+    header("Location: ../Backend/admin-menu.php");
+    exit;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
