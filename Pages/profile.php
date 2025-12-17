@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . "/../Backend/db.php";
+require "../Backend/db.php";
 
 /* Protect page */
 if (!isset($_SESSION["user_id"])) {

@@ -25,7 +25,12 @@ if (!$item) {
 
 $quantity = $item['quantity'];
 
-$quantity += ($action === "increase") ? 1 : -1;
+if ($action === "increase") {
+    $quantity++;
+} else {
+    $quantity--;
+}
+
 
 if ($quantity <= 0) {
     $pdo->prepare("
