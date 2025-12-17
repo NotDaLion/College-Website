@@ -128,95 +128,84 @@ $role = $_SESSION["role"];
 
               <div class="row g-4">
                 <!-- Calamari -->
-                <?php
-                
-                
-                ?>
-
-                <!-- Gamberetti al Limone -->
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a
-                      href="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
-                      class="glightbox"
-                      aria-label="View Gamberetti al Limone"
-                    >
-                      <img
-                        src="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
-                        alt="Gamberetti al Limone"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Gamberetti al Limone</h4>
-                      <p class="ingredients">
-                        Sautéed prawns with garlic, fresh lemon & parsley.
-                      </p>
-                      <div class="price">$11.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="2" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Gamberetti al Limone"
-                        />
-                        <input type="hidden" name="price" value="11.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Cozze alla Marinara -->
           <?php
-            $stmt = $pdo->prepare("SELECT * FROM products");
+            $stmt = $pdo->prepare("SELECT * FROM products WHERE category = 'starters'");
             $stmt->execute();
-            // set the resulting array to associative
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo '
-                  <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a href="../Assets/insalata.jpg" class="glightbox">
+            echo "<article class='col-12 col-md-6 col-lg-4'>
+                  <div class='menu-card h-100'>
+                    <a href='../Assets/ class='glightbox'>
                       <img
-                        src="../Assets/insalata.jpg"
-                        alt="Insalata di Mare"
-                        class="menu-img img-fluid"
-                        loading="lazy"
+                        src='../Assets/primary-tab-new.svg'
+                        style = 'margin-left:75px; width:200px'
+                    
+                        alt='{$row['name']}'
+                        class='menu-img img-fluid'
+                        loading='lazy'
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>Insalata di Mare</h4>
-                      <p class="ingredients">
-                        Mixed seafood salad with citrus dressing.
+                    <div class='menu-card-body'>
+                      <h4>Edit Products Database</h4>
+                      <p class='ingredients'>
+                        {$row['description']}
                       </p>
-                      <div class="price">$13.95</div>
+                      <div class='price'></div>
 
                       <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
+                        action='admin-db.php'
+                        method='POST'
+                        class='mt-2'
                       >
-                        <input type="hidden" name="id" value="5" />
+                        <input type='hidden' name='id' value='5' />
                         <input
-                          type="hidden"
-                          name="name"
-                          value="Insalata di Mare"
+                          type='hidden'
+                          name='name'
+                          value='{$row['name']}'
                         />
-                        <input type="hidden" name="price" value="13.95" />
+                        <input type='hidden' name='price' value='{$row['price']}' />
                         <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
+                          type='submit'
+                          class='btn btn-sm btn-outline-primary w-100'
+                        >
+                          EDIT
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </article>";
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              echo "
+                  <article class='col-12 col-md-6 col-lg-4'>
+                  <div class='menu-card h-100'>
+                    <a href='../Assets/{$row['name']} class='glightbox'>
+                      <img
+                        src='../Assets/{$row['image']}'
+                        alt='{$row['name']}'
+                        class='menu-img img-fluid'
+                        loading='lazy'
+                      />
+                    </a>
+                    <div class='menu-card-body'>
+                      <h4>{$row['name']}</h4>
+                      <p class='ingredients'>
+                        {$row['description']}
+                      </p>
+                      <div class='price'>$ {$row['price']}</div>
+
+                      <form
+                        action='../Backend/add_to_cart.php'
+                        method='POST'
+                        class='mt-2'
+                      >
+                        <input type='hidden' name='id' value='5' />
+                        <input
+                          type='hidden'
+                          name='name'
+                          value='{$row['name']}'
+                        />
+                        <input type='hidden' name='price' value='{$row['price']}' />
+                        <button
+                          type='submit'
+                          class='btn btn-sm btn-outline-primary w-100'
                         >
                           Add to Cart
                         </button>
@@ -224,53 +213,10 @@ $role = $_SESSION["role"];
                     </div>
                   </div>
                 </article>
-          ';
+          ";
           }
           ?>
-
-
-
-
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a href="../Assets/focaccia.jpg" class="glightbox">
-                      <img
-                        src="../Assets/focaccia.jpg"
-                        alt="Focaccia"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Focaccia al Rosmarino</h4>
-                      <p class="ingredients">
-                        House rosemary focaccia, sea salt.
-                      </p>
-                      <div class="price">$5.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="6" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Focaccia al Rosmarino"
-                        />
-                        <input type="hidden" name="price" value="5.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-              </div>
+            </div>
             </div>
             <!-- Seafood -->
             <div
