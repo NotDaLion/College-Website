@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Prepare SQL
     $stmt = $pdo->prepare(
-        "SELECT id, full_name, password 
+        "SELECT id, full_name, password, role 
          FROM users 
          WHERE email = :email"
     );
@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $stmt->fetch();
 
     if ($user) {
-
         if (password_verify($pass, $user["password"])) {
 
             // Login success
             $_SESSION["user_id"]   = $user["id"];
             $_SESSION["user_name"] = $user["full_name"];
+            $_SESSION["role"] = $user["role"];
 
             header("Location: ../Pages/account.php");
             exit;

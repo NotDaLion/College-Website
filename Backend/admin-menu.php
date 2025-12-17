@@ -1,3 +1,11 @@
+<?php
+session_start();
+require "db.php";
+if($_SESSION["role"] != "admin"){
+    header("Location: ../Pages/Menu.php");
+}
+$role = $_SESSION["role"];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +20,7 @@
     <link rel="stylesheet" href="../Stylesheets/Menu.css" />
   </head>
   <body>
-    <header class="alt-header" role="banner">
+      <header class="alt-header" role="banner">
       <div class="alt-container">
         <a
           class="alt-logo"
@@ -120,43 +128,84 @@
 
               <div class="row g-4">
                 <!-- Calamari -->
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a
-                      href="../Assets/Calamari-5.jpg"
-                      class="glightbox"
-                      aria-label="View Calamari Fritti"
-                    >
+          <?php
+            $stmt = $pdo->prepare("SELECT * FROM products WHERE category = 'starters'");
+            $stmt->execute();
+            echo "<article class='col-12 col-md-6 col-lg-4'>
+                  <div class='menu-card h-100'>
+                    <a href='../Assets/ class='glightbox'>
                       <img
-                        src="../Assets/Calamari-5.jpg"
-                        alt="Calamari Fritti"
-                        class="menu-img img-fluid"
-                        loading="lazy"
+                        src='../Assets/primary-tab-new.svg'
+                        style = 'margin-left:75px; width:200px'
+                    
+                        alt='{$row['name']}'
+                        class='menu-img img-fluid'
+                        loading='lazy'
                       />
                     </a>
-                    <div class="menu-card-body">
-                      <h4>
-                        Calamari Fritti <span class="badge-fresh">Best Seller!</span>
-                      </h4>
-                      <p class="ingredients">
-                        Lightly fried squid served with lemon & garlic aioli.
+                    <div class='menu-card-body'>
+                      <h4>Edit Products Database</h4>
+                      <p class='ingredients'>
+                        {$row['description']}
                       </p>
-                      <div class="price">$9.95</div>
+                      <div class='price'></div>
+
                       <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
+                        action='admin-db.php'
+                        method='POST'
+                        class='mt-2'
                       >
-                        <input type="hidden" name="id" value="1" />
+                        <input type='hidden' name='id' value='5' />
                         <input
-                          type="hidden"
-                          name="name"
-                          value="Calamari Fritti"
+                          type='hidden'
+                          name='name'
+                          value='{$row['name']}'
                         />
-                        <input type="hidden" name="price" value="9.95" />
+                        <input type='hidden' name='price' value='{$row['price']}' />
                         <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
+                          type='submit'
+                          class='btn btn-sm btn-outline-primary w-100'
+                        >
+                          EDIT
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </article>";
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              echo "
+                  <article class='col-12 col-md-6 col-lg-4'>
+                  <div class='menu-card h-100'>
+                    <a href='../Assets/{$row['name']} class='glightbox'>
+                      <img
+                        src='../Assets/{$row['image']}'
+                        alt='{$row['name']}'
+                        class='menu-img img-fluid'
+                        loading='lazy'
+                      />
+                    </a>
+                    <div class='menu-card-body'>
+                      <h4>{$row['name']}</h4>
+                      <p class='ingredients'>
+                        {$row['description']}
+                      </p>
+                      <div class='price'>$ {$row['price']}</div>
+
+                      <form
+                        action='../Backend/add_to_cart.php'
+                        method='POST'
+                        class='mt-2'
+                      >
+                        <input type='hidden' name='id' value='5' />
+                        <input
+                          type='hidden'
+                          name='name'
+                          value='{$row['name']}'
+                        />
+                        <input type='hidden' name='price' value='{$row['price']}' />
+                        <button
+                          type='submit'
+                          class='btn btn-sm btn-outline-primary w-100'
                         >
                           Add to Cart
                         </button>
@@ -164,220 +213,10 @@
                     </div>
                   </div>
                 </article>
-
-                <!-- Gamberetti al Limone -->
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a
-                      href="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
-                      class="glightbox"
-                      aria-label="View Gamberetti al Limone"
-                    >
-                      <img
-                        src="../Assets/12-gamberetti-in-padella-finale-1200x675.avif"
-                        alt="Gamberetti al Limone"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Gamberetti al Limone</h4>
-                      <p class="ingredients">
-                        Sautéed prawns with garlic, fresh lemon & parsley.
-                      </p>
-                      <div class="price">$11.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="2" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Gamberetti al Limone"
-                        />
-                        <input type="hidden" name="price" value="11.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Cozze alla Marinara -->
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a
-                      href="../Assets/cozze-alla-marinara-pomodoro-1-1024x683.jpg"
-                      class="glightbox"
-                      aria-label="View Cozze alla Marinara"
-                    >
-                      <img
-                        src="../Assets/cozze-alla-marinara-pomodoro-1-1024x683.jpg"
-                        alt="Cozze alla Marinara"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Cozze alla Marinara</h4>
-                      <p class="ingredients">
-                        Mussels simmered in tomato, garlic & white wine.
-                      </p>
-                      <div class="price">$12.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="3" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Cozze alla Marinara"
-                        />
-                        <input type="hidden" name="price" value="12.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a
-                      href="../Assets/Bruschetta-al-pomodoro-2.jpg"
-                      class="glightbox"
-                    >
-                      <img
-                        src="../Assets/Bruschetta-al-pomodoro-2.jpg"
-                        alt="Bruschetta"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Bruschetta al Pomodoro</h4>
-                      <p class="ingredients">
-                        Grilled bread with tomato, basil & olive oil.
-                      </p>
-                      <div class="price">$7.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="4" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Bruschetta al Pomodoro"
-                        />
-                        <input type="hidden" name="price" value="7.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a href="../Assets/insalata.jpg" class="glightbox">
-                      <img
-                        src="../Assets/insalata.jpg"
-                        alt="Insalata di Mare"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Insalata di Mare</h4>
-                      <p class="ingredients">
-                        Mixed seafood salad with citrus dressing.
-                      </p>
-                      <div class="price">$13.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="5" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Insalata di Mare"
-                        />
-                        <input type="hidden" name="price" value="13.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                  <div class="menu-card h-100">
-                    <a href="../Assets/focaccia.jpg" class="glightbox">
-                      <img
-                        src="../Assets/focaccia.jpg"
-                        alt="Focaccia"
-                        class="menu-img img-fluid"
-                        loading="lazy"
-                      />
-                    </a>
-                    <div class="menu-card-body">
-                      <h4>Focaccia al Rosmarino</h4>
-                      <p class="ingredients">
-                        House rosemary focaccia, sea salt.
-                      </p>
-                      <div class="price">$5.95</div>
-
-                      <form
-                        action="../Backend/add_to_cart.php"
-                        method="POST"
-                        class="mt-2"
-                      >
-                        <input type="hidden" name="id" value="6" />
-                        <input
-                          type="hidden"
-                          name="name"
-                          value="Focaccia al Rosmarino"
-                        />
-                        <input type="hidden" name="price" value="5.95" />
-                        <button
-                          type="submit"
-                          class="btn btn-sm btn-outline-primary w-100"
-                        >
-                          Add to Cart
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </article>
-              </div>
+          ";
+          }
+          ?>
+            </div>
             </div>
             <!-- Seafood -->
             <div

@@ -5,3 +5,4 @@ session_destroy();
 
 header("Location: ../Pages/login.html");
 exit;
+?>
