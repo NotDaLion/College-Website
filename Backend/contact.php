@@ -1,8 +1,8 @@
  <?php
-if (isset($_POST['full_name'], $_POST['email'], $_POST['message'])) {
+if (isset($_POST['full_name'], $_POST['email'], $_POST['phone'], $_POST['message'])) {
 
 
-    $conn = mysqli_connect("localhost", "root", "", "contact_page");
+    $conn = mysqli_connect("localhost", "root", "", "restaurant_db");
 
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -10,7 +10,7 @@ if (isset($_POST['full_name'], $_POST['email'], $_POST['message'])) {
 
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'] ?? '';
+    $phone = $_POST['phone'];
     $message = $_POST['message'];
 
 
@@ -98,7 +98,7 @@ if (isset($_POST['full_name'], $_POST['email'], $_POST['message'])) {
                 placeholder="you@example.com"
               />
 
-              <label for="phone">Phone (optional)</label>
+              <label for="phone">Phone</label>
               <input
                 id="phone"
                 name="phone"

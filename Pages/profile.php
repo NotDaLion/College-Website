@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["delete"])) {
         <li><a href="../Pages/index.html">Home</a></li>
         <li><a href="../Pages/Menu.html">Menu</a></li>
         <li><a href="../Pages/about-alt.html">About</a></li>
-        <li><a href="../Pages/contact.html">Contact</a></li>
+        <li><a href="../Pages/contact.php">Contact</a></li>
         <li><a href="account.php" class="active">Account</a></li>
         <li><a href="../Backend/logout.php">Logout</a></li>
       </ul>
