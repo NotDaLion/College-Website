@@ -12,7 +12,8 @@ session_start();
     <title>Contact - La Cucina Del Mare</title>
     <link rel="stylesheet" href="../Stylesheets/contact.css" />
     <link rel="icon" type="image/x-icon" href="../Assets/prawn.png" />
-    <script src="../"></script>
+    <script src="../jquery-3.7.1.min.js.js"></script>
+    <script src="../Scripts/admin-db.js"></script>
   </head>
   <body>
     <header class="alt-header" role="banner">
@@ -48,10 +49,10 @@ session_start();
             <form id="contactForm" class="contact-form" method="POST" action="db-edit.php">
                 <label for="opType">Select Operation Type:</label>
                 <select name="opType" id="cars">
-                  <option value="create">Create</option>
-                  <option value="read">Read</option>
-                  <option value="update">Update</option>
-                  <option value="delete">Delete</option>
+                  <option value="create" id="op-create">Create</option>
+                  <option value="read" id="op-read">Read</option>
+                  <option value="update" id="op-update">Update</option>
+                  <option value="delete" id="op-delete">Delete</option>
                 </select> 
 
               <label for="name" class="cls-name">Product Name</label>

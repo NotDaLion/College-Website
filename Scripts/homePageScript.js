@@ -2,7 +2,6 @@ $(document).ready(function(){
     //image alternation script
 setInterval(function(){
         //
-    console.log($("#photo1").css("display"));
     if($("#photo1").css("display") == "block"){
         $("#photo1").fadeOut(400);
         $("#photo2").delay(400).fadeIn(400);
@@ -15,7 +14,7 @@ setInterval(function(){
         $("#photo3").fadeOut(400);
         $("#photo1").delay(400).fadeIn(400);
     }
-        //
+    //
 },7000)
     //social media hover script
     $(".social-img").hover(function(){

@@ -186,7 +186,7 @@ body{
 
 <div class="cart-header">
     <h2>🛒 Your Cart</h2>
-    <a href="Menu.html" class="btn btn-primary">Continue Shopping</a>
+    <a href="Menu.php" class="btn btn-primary">Continue Shopping</a>
 </div>
 
 <?php if (count($items) === 0): ?>

@@ -12,7 +12,7 @@
     $img_link = trim($_POST["image"]);
     $desc  = trim($_POST["desc"] ?? '');
     $category  = trim($_POST["category"]);
-    //Create
+    //create
     if($_POST['opType'] == 'create'){
         $stmt = $pdo->prepare("INSERT INTO products (name, description, price, image, category)
         VALUES (:name, :desc, :price,:image,:category)");
