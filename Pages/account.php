@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// protect page
 if (!isset($_SESSION["user_id"])) {
     header("Location: login.html");
     exit;
@@ -23,10 +22,10 @@ $userName = $_SESSION["user_name"];
 
 <body>
 
-<!-- Header -->
+
 <header class="alt-header">
   <div class="alt-container">
-    <a class="alt-logo" href="/">La Cucina Del Mare</a>
+    <a class="alt-logo" href="../Pages/index.html">La Cucina Del Mare</a>
     <nav class="alt-nav">
       <ul>
         <li><a href="../Pages/index.html">Home</a></li>
@@ -40,7 +39,7 @@ $userName = $_SESSION["user_name"];
   </div>
 </header>
 
-<!-- Main -->
+
 <main class="account-page">
   <div class="account-card">
     <h2>Hello, <?= htmlspecialchars($userName) ?> 👋</h2>
@@ -72,7 +71,7 @@ $userName = $_SESSION["user_name"];
   </div>
 </main>
 
-<!-- Footer -->
+
 <footer class="alt-footer">
   <div class="alt-container">
     <p>© <span id="alt-year"></span> La Cucina Del Mare</p>
